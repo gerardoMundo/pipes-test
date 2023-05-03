@@ -18,29 +18,34 @@
     </div>
     <div class="col-12 md:col-6">
         <p-fieldset legend="slice pipe" [toggleable]="true">
-            <p>
-
-            </p>
+            <p>Original:</p>
+            <pre>{{clients}}</pre>
+            <p>Con slice:</p>
+            <pre>{{clients | slice:0:3}}</pre>
         </p-fieldset>
     </div>
     <div class="col-12 md:col-6">
         <p-fieldset legend="JSON pipe" [toggleable]="true">
-            <p>
-
-            </p>
+            <pre>
+                {{person | json}}
+            </pre>
         </p-fieldset>
     </div>
     <div class="col-12 md:col-6">
         <p-fieldset legend="KeyValue pipe" [toggleable]="true">
-            <p>
 
-            </p>
+            <ul>
+                <li *ngFor="let item of person | keyvalue">
+                    <b>{{item.key}}:</b> {{item.value}}
+                </li>
+            </ul>
+
         </p-fieldset>
     </div>
     <div class="col-12 md:col-6">
         <p-fieldset legend="Async pipe" [toggleable]="true">
             <p>
-
+                {{myObservable | async}}
             </p>
         </p-fieldset>
     </div>
