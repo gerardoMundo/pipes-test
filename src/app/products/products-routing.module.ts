@@ -6,6 +6,7 @@ import {
   NumbersPageComponent,
   UncommonPageComponent,
 } from './pages';
+import { CustomPipesComponent } from './pages/custom-pipes/custom-pipes.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'uncommon',
     component: UncommonPageComponent,
+  },
+  {
+    path: 'custom',
+    component: CustomPipesComponent,
   },
   {
     path: '**',

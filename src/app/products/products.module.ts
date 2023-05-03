@@ -8,12 +8,14 @@ import {
   NumbersPageComponent,
   UncommonPageComponent,
 } from './pages';
+import { CustomPipesComponent } from './pages/custom-pipes/custom-pipes.component';
 
 @NgModule({
   declarations: [
     BasicPageComponent,
     NumbersPageComponent,
     UncommonPageComponent,
+    CustomPipesComponent,
   ],
   imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
 })
