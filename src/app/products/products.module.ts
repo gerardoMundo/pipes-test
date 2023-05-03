@@ -9,6 +9,7 @@ import {
   UncommonPageComponent,
 } from './pages';
 import { CustomPipesComponent } from './pages/custom-pipes/custom-pipes.component';
+import { ToggleCasePipe } from './pages/pipes/toggle-case.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { CustomPipesComponent } from './pages/custom-pipes/custom-pipes.componen
     NumbersPageComponent,
     UncommonPageComponent,
     CustomPipesComponent,
+    //Custom Pipes
+    ToggleCasePipe,
   ],
   imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
 })
