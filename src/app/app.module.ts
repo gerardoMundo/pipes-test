@@ -1,23 +1,26 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { registerLocaleData } from '@angular/common';
+import localEsMX from '@angular/common/locales/es-MX';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { BasicPageComponent } from './products/pages/basic-page/basic-page.component';
-import { NumbersPageComponent } from './products/pages/numbers-page/numbers-page.component';
-import { UncommonPageComponent } from './products/pages/uncommon-page/uncommon-page.component';
+import { ProductsModule } from './products/products.module';
+
+registerLocaleData(localEsMX);
 
 @NgModule({
-  declarations: [AppComponent, BasicPageComponent, NumbersPageComponent, UncommonPageComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
+    ProductsModule,
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'es-MX' }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

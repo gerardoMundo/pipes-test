@@ -1,1 +1,47 @@
-<p>basic-page works!</p>
+<p-panel class="mt-2" header="Pipes comunes en Angular"> </p-panel>
+<div class="grid mt-2">
+  <div class="col-12 md:col-4">
+    <p-card header="Uppercase"
+      >1.
+      {{ lower | uppercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="LowerCase"
+      >2.
+      {{ upper | lowercase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="TitleCase"
+      >3.
+      {{ title | titlecase }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="TitleCase">
+      <ul>
+        <li>fecha:</li>
+        <li>fecha con pipe date:</li>
+        <li>fecha con pipe date:short</li>
+        <li>fecha con pipe date:long</li>
+        <li>fecha con pipe date:MMMM</li>
+        <li>fecha con pipe date:MMMM, YYYY</li>
+        <li>fecha con pipe de idioma Es</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-12 md:col-6">
+    <p-card header="TitleCase">
+      <ul>
+        <li>{{ customDate }}</li>
+        <li>{{ customDate | date }}</li>
+        <li>{{ customDate | date : 'short' }}</li>
+        <li>{{ customDate | date : 'long' }}</li>
+        <li>{{ customDate | date : 'MMMM' }}</li>
+        <li>{{ customDate | date : 'MMMM, YYYY' }}</li>
+        <li>{{ customDate | date : 'long' : '' : 'es-MX' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>

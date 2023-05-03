@@ -1,1 +1,17 @@
-<p>numbers-page works!</p>
+<div class="grid mt-2">
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas totales">
+      {{ longNumber | number:'1.2-2' }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Ingresos brutos">
+      {{ longNumber | currency: 'MX. ' : 'symbol-narrow' }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Porcentaje de egresos">
+      {{ percentage | percent: '1.2-2' }}
+    </p-card>
+  </div>
+</div>
