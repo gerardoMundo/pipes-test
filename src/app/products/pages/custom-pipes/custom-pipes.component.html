@@ -4,9 +4,19 @@
     </p>
 </p-panel>
 
-<div class="grid mt-2">
-    <div class="col-12 md:col-4">
-        <p-card header="TogglePipe">
-            {{'nosotros' | toggleCase}}
-        </p-card>
+<div class="col-12 md:col-4">
+    <p-card header="TogglePipe">
+        Ejemplo: {{'nosotros' | toggleCase}}
+    </p-card>
+</div>
+<p-toolbar>
+    <div class="p-toolbar-group-start">
+        <p-button label="ToggleCase" icon="pi pi-arrows-v" styleClass="p-button-success"></p-button>
     </div>
+
+    <div class="p-toolbar-group-end">
+        <p-button label="Por nombre" icon="pi pi-sort" class="mr-2"></p-button>
+        <p-button label="Por volar" icon="pi pi-calendar" styleClass="p-button-success mr-2"></p-button>
+        <p-button label="Por color" icon="pi pi-times" styleClass="p-button-danger"></p-button>
+    </div>
+</p-toolbar>
