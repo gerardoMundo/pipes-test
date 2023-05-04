@@ -10,6 +10,8 @@ import {
 } from './pages';
 import { CustomPipesComponent } from './pages/custom-pipes/custom-pipes.component';
 import { ToggleCasePipe } from './pages/pipes/toggle-case.pipe';
+import { CanFlyPipe } from './pages/pipes/can-fly.pipe';
+import { SortByPipe } from './pages/pipes/sort-by.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ToggleCasePipe } from './pages/pipes/toggle-case.pipe';
     CustomPipesComponent,
     //Custom Pipes
     ToggleCasePipe,
+    CanFlyPipe,
+    SortByPipe,
   ],
   imports: [CommonModule, PrimeNgModule, ProductsRoutingModule],
 })

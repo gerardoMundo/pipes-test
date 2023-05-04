@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'shared-toggle-button',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styles: [],
 })
 export class ToggleButtonComponent {
-  public checked = false;
+  public checked = this.themeService.themeSelection;
 
-  changeTheme() {
-    this.checked = !this.checked;
+  constructor(private themeService: ThemeService) {}
+
+  changeTheme(theme: boolean): void {
+    this.themeService.switchTheme(this.checked);
   }
 }

@@ -7,6 +7,6 @@
     <ng-template [ngIf]="checked">
         <span class="pi pi-sun mr-2"></span>
     </ng-template>
-    <p-inputSwitch (click)="changeTheme()"></p-inputSwitch>
+    <p-inputSwitch [(ngModel)]="checked" (onChange)="changeTheme($event.checked)"></p-inputSwitch>
 
 </div>
