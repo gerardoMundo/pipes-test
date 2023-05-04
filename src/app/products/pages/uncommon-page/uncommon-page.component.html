@@ -1,0 +1,53 @@
+<p-panel class="mt-2" header="Pipes poco comunes en Angular"> </p-panel>
+<div class="grid mt-2">
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
+            <p>
+                Hola {{name}}, es un honor {{genre | i18nSelect: mapGenre}} a nuestro evento.
+            </p>
+            <p-button (click)="sendInvitation()" label="Enviar"></p-button>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="i18nSingular pipe" [toggleable]="true">
+            <p>
+                Actualmente {{clients.length | i18nPlural:clientsMap}}
+            </p>
+            <p-button (click)="deleteClient()" label="Borrar cliente"></p-button>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="slice pipe" [toggleable]="true">
+            <p>Original:</p>
+            <pre>{{clients}}</pre>
+            <p>Con slice:</p>
+            <pre>{{clients | slice:0:3}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="JSON pipe" [toggleable]="true">
+            <pre>
+                {{person | json}}
+            </pre>
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="KeyValue pipe" [toggleable]="true">
+
+            <ul>
+                <li *ngFor="let item of person | keyvalue">
+                    <b>{{item.key}}:</b> {{item.value}}
+                </li>
+            </ul>
+
+        </p-fieldset>
+    </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="Async pipe" [toggleable]="true">
+            <p>
+                {{myObservable | async}}
+            </p>
+        </p-fieldset>
+    </div>
+
+</div>
